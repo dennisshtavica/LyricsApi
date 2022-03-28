@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="" class="nav__logo"> Styx </a>
+
+        <div class="right_side">
+          <div class="search">
+            <img class="icon" src="./img/search.png" alt="" />
+            <form action="" id="form" autocomplete="off">
+              <div class="input">
+                <input type="text" placeholder="Search lyrics" id="mysearch" />
+                <button class="submit">Go</button>
+              </div>
+            </form>
+          </div>
+          <div class="sign_up">
+            <a href="">Sign up</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="dropdown"></div>
+
+    <main class="main">
+      <div class="charts container">
+        <div class="charts_content grid">
+          <div class="charts_title">
+            <h1>CHARTS</h1>
+          </div>
+          <div class="charts_undertitle">
+            <p>TRENDING ON STYX</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="chartRow"></div>
+
+    <!-- <div id="anim" class="container"></div> -->
+
+    <lottie-player
+      id="firstLottie"
+      class="container"
+      src="https://assets2.lottiefiles.com/packages/lf20_ykf6n5nu.json"
+      style="width: auto; height: 240px;"
+      >"></lottie-player
+    >
+
+    <main class="main">
+      <div class="charts container">
+        <div class="charts_content grid">
+          <div class="charts_title">
+            <h1>ARTISTS</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="artistRow"></div>
+
+    <footer>
+      <div class="contents container">
+        <div class="left_side">
+          <a href="" style="color: #072227; margin-bottom: 10px;" class="nav__logo"> Styx </a>
+          <a class="contact_signout" href="">Contact <br /></a>
+          <a class="contact_signout" href="">Sign out</a>
+        </div>
+        <div class="right_side2">
+          <h3>Community</h3>
+          <div class="socials">
+            <img src="./img/instagram (1).png" alt="" />
+            <img src="./img/twitter1.png" alt="">
+          </div>
+          <p>© 2022</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/lottie.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

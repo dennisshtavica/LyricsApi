@@ -1,0 +1,459 @@
+:root {
+  --header-height: 4.5rem;
+
+  /*========== Colors ==========*/
+  --container-color: #b0c6d2;
+  --nav-text-color: #000000;
+
+  --body-color: #072227;
+  /* --dark-mode: #242f35; */
+  /* Dark mode #242f35 */
+
+  /*==========Font=========*/
+  --body-font: "Poppins";
+  --title-font: "Mickey";
+  --title-font-second: "Minnie";
+  --biggest-font-size: 2.75rem;
+  --h1-font-size: 1.875rem;
+  --text-font-size: 0.938;
+  --small-font-size: 0.8rem;
+  --nav-font-size: 1.25rem;
+  --stats-font-size: 0.813rem;
+  --point-font-size: 0.625rem;
+
+  /* =======Font Weight======== */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-black: 900;
+  /* =======Margenes bottom======== */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  /* font-family: var(--body-font); */
+  /* font-size: var(--normal-font-size); */
+  background: var(--body-color);
+  /* color: var(--text-color); */
+  /* transition: 0.5s background ease; */
+  height: 1300px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 1rem 0 2rem;
+}
+.login-section {
+  padding: 8rem 0 2rem;
+}
+.section__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+  text-align: center;
+}
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+.grid {
+  display: grid;
+}
+
+.main {
+  overflow: hidden; /*For animation*/
+}
+
+/*=============== HEADER ===============*/
+.header {
+  width: 100%;
+  /* background: var(--body-color); */
+  background-color: #072227;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-weight: var(--font-medium);
+  font-family: var(--title-font);
+  font-size: 45px;
+  color: #4fbdba;
+  letter-spacing: -7px;
+}
+.sign_up {
+  font-family: var(--body-font);
+  width: 80px;
+  height: 35px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #aefeff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign_up a {
+  color: #000000;
+}
+.right_side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.search {
+  transition: 0.2s;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #072227;
+}
+.search img {
+  width: 20px;
+}
+.search.active {
+  width: 130px;
+  height: 35px;
+  background-color: #072227;
+}
+.search .input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 35px;
+  background-color: #072227;
+  border: 5px;
+}
+.search .input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #072227;
+  color: white;
+  margin-left: 10px;
+}
+.search .input input::placeholder {
+  color: rgb(133, 133, 133);
+  font-family: poppins;
+}
+.submit {
+  padding: 5px;
+  background-color: #072227;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+}
+.charts_title h1 {
+  font-family: var(--title-font-second);
+  font-size: 45px;
+  color: #aefeff;
+  letter-spacing: -1px;
+}
+.charts_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.charts_undertitle {
+  font-family: var(--title-font-second);
+  font-size: 15px;
+  color: #aefeff;
+  letter-spacing: -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4fbdba;
+}
+
+.song-list {
+  background-color: #35858b;
+  width: 100%;
+  height: 500px;
+  overflow: scroll;
+  transition: 1.2s;
+  font-family: poppins;
+  padding: 15px;
+  animation-name: drop;
+  animation-duration: 1s;
+}
+
+.song-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.song-list span {
+  background-color: #072227;
+  padding: 5px;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.song-list span:hover {
+  box-shadow: -3px 3px 0px #aefeff;
+  transition: 0.2s;
+}
+
+.song-list li {
+  margin-bottom: 40px;
+}
+
+.lyrics-page h2,
+h4 {
+  text-align: center;
+}
+.lyrics-page h2 {
+  font-family: poppins;
+  color: white;
+  font-size: 30px;
+}
+
+.lyrics-page {
+  margin-top: 100px;
+}
+
+.lyrics-page h4 {
+  font-family: poppins;
+  color: white;
+}
+.lyricsParagraph {
+  margin-top: 30px;
+  font-family: poppins;
+  background-color: #4fbdba;
+  padding: 20px;
+  font-weight: 600;
+}
+.subtitle {
+  color: white;
+  margin-bottom: 30px;
+}
+
+@keyframes drop {
+  from {
+    top: auto;
+  }
+  to {
+    top: auto;
+  }
+}
+
+.chart {
+  width: auto;
+  height: auto;
+  /* background-color: #35858B; */
+  display: grid;
+  grid-template-rows: repeat(1, 100px);
+  grid-template-columns: 10px 100px 170px auto;
+  font-family: poppins;
+}
+.row_chart_number {
+  color: #aefeff;
+  justify-self: center;
+  align-self: center;
+}
+.row_chart_image {
+  width: 70%;
+  align-self: center;
+  justify-self: center;
+}
+.row_chart_title {
+  /* background-color: rgb(84, 217, 226); */
+  align-self: center;
+  justify-self: self-start;
+  color: white;
+  font-size: 13px;
+}
+.row_chart_views {
+  /* background-color: rgb(162, 255, 119); */
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: white;
+}
+.row_chart_views img {
+  width: 15px;
+  margin-right: 2px;
+}
+#chartRow {
+  margin-top: 30px;
+}
+
+#artistRow {
+  margin-top: 30px;
+}
+
+footer {
+  width: auto;
+  height: 220px;
+  background-color: #35858b;
+  margin-top: 30px;
+}
+.contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  gap: 50px;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.socials img {
+  width: 15%;
+}
+.left_side .contact_signout {
+  font-family: poppins;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.right_side2 {
+  flex-direction: column;
+  color: #072227;
+  width: max-content;
+  text-align: center;
+}
+.right_side2 h3 {
+  font-family: poppins;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.right_side2 p {
+  font-family: poppins;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 280px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}
+/* 
+@media screen and (min-width: 500px) {
+
+  lottie-player {
+    width: 10px;
+  }
+  .chart {
+    grid-template-columns: 10px 100px 270px auto;
+    
+  }
+
+} */
+
+@media screen and (min-width: 892px) {
+  #chartRow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: repeat(1, 100px);
+  }
+  .chart{
+    transition: 0.2s;
+  }
+  .chart:hover{
+    background-color: #2e5a5e;
+    padding: 0px 20px;
+    border-radius: 10px;
+    transition: 0.2s;
+  }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .row_chart_number{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .row_chart_views{
+    margin-left: 400px;
+  }
+  .socials img {
+    width: 30px;
+  }
+  .contents {
+    margin-left: 400px;
+    margin-right: 400px;
+  }
+  lottie-player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
